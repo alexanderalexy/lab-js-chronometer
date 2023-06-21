@@ -51,16 +51,16 @@ class Chronometer {
   computeTwoDigitNumber(value) {
     
     // Saves Value to a string
-    const string = value.toString();
+    const stringValue = value.toString();
 
     // Add`s 0 before number, when string.length = 1
-    if(string.length === 1) {
-      return '0' + string;
+    if(stringValue.length === 1) {
+      return '0' + stringValue;
     }
 
     
-    else if (string.length === 2) {
-      return string;
+    else if (stringValue.length === 2) {
+      return stringValue;
     }
     
 
@@ -84,8 +84,8 @@ class Chronometer {
    // stores minutes and second in a variable and should change the numbers to strings
    // Dosen't work
     
-    let splittedMinutes = computeTwoDigitNumber(this.getMinutes());
-    let splittedSeconds = computeTwoDigitNumber(this.getSeconds());
+    const splittedMinutes = this.computeTwoDigitNumber(this.getMinutes());
+    const splittedSeconds = this.computeTwoDigitNumber(this.getSeconds());
 
     //Returns "mm:ss"
     return `${splittedMinutes}:${splittedSeconds}`;
